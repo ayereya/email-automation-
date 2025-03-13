@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Automation Engine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Gmail Logo" class="logo">
+        <h1>Email Automation Engine</h1>
+
+        <div class="form-container">
+            <label for="prospectName">Prospect Name:</label>
+            <input type="text" id="prospectName" placeholder="Enter name">
+
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" placeholder="Enter company name">
+
+            <label for="industry">Industry:</label>
+            <input type="text" id="industry" placeholder="e.g., SaaS, E-commerce, Finance">
+
+            <label for="companySize">Company Size:</label>
+            <select id="companySize">
+                <option value="Startup">Startup (1-50 employees)</option>
+                <option value="Small">Small Business (51-200 employees)</option>
+                <option value="Medium">Medium Business (201-500 employees)</option>
+                <option value="Enterprise">Enterprise (500+ employees)</option>
+            </select>
+
+            <label for="prospectEmail">Prospect Email:</label>
+            <input type="email" id="prospectEmail" placeholder="Enter email">
+
+            <label for="responseType">Response Type:</label>
+            <select id="responseType">
+                <option value="positive">Positive</option>
+                <option value="semi-positive">Semi-Positive</option>
+                <option value="negative">Negative</option>
+                <option value="semi-negative">Semi-Negative</option>
+                <option value="no_response">No Response</option>
+            </select>
+
+            <button onclick="generateEmail()">Generate Email</button>
+        </div>
+
+        <div id="emailOutput" class="email-box">
+            <h2>Generated Email</h2>
+            <p id="emailContent">Your email will appear here...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
